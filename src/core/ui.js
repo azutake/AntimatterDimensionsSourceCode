@@ -1,6 +1,8 @@
 import VTooltip from "v-tooltip";
 import VueGtag from "vue-gtag";
 
+import { i18n } from "./i18n";
+
 import { DEV } from "@/env";
 
 import { useLongPress, useRepeatingClick } from "./longpress";
@@ -192,6 +194,7 @@ Vue.use(VueGtag, {
 });
 
 export const ui = new Vue({
+  i18n,
   el: "#ui",
   components: {
     GameUIComponent

@@ -50,15 +50,15 @@ export default {
   <div class="c-subtab-option-container">
     <PrimaryToggleButton
       v-model="autobuyersOn"
-      on="Pause autobuyers"
-      off="Resume autobuyers"
+      :on="$t('tabs.automation.toggleAutobuyers.on')"
+      :off="$t('tabs.automation.toggleAutobuyers.off')"
       class="o-primary-btn--subtab-option"
     />
     <PrimaryButton
       class="o-primary-btn--subtab-option"
       @click="toggleAllAutobuyers()"
     >
-      {{ allAutobuyersDisabled ? "Enable" : "Disable" }} all autobuyers
+      {{ $t(`tabs.automation.toggleAllAutoBuyers.${allAutobuyersDisabled ? "on" : "off"}`) }}
     </PrimaryButton>
     <span v-if="isDoomed">
       <PrimaryButton

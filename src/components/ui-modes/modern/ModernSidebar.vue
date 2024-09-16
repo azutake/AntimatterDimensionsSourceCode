@@ -37,7 +37,7 @@ export default {
     >
       <ModernTabButton
         v-if="tabVisibilities[tabPosition]"
-        :key="tab.name"
+        :key="tab.key"
         :tab="tab"
         :tab-position="tabPosition"
       />

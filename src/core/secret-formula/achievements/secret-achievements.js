@@ -1,3 +1,5 @@
+import { i18n } from "@/core/i18n";
+
 export const secretAchievements = [
   {
     id: 11,

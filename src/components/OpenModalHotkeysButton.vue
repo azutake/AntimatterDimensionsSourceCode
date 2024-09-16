@@ -10,10 +10,14 @@ export default {
 </script>
 
 <template>
-  <p
+  <i18n
+    path="message.pressKeyToOpenHotkeyList"
     class="c-options-tab__hotkeys-link"
+    tag="p"
     @click="handleClick"
   >
-    Press <kbd>?</kbd> to open the hotkey list.
-  </p>
+    <template #question>
+      <kbd>?</kbd>
+    </template>
+  </i18n>
 </template>

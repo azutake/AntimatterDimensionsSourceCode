@@ -33,14 +33,14 @@ export default {
       return `${formatX(tickmult.reciprocal(), 2, 3)} faster / upgrade.`;
     },
     tickspeedDisplay() {
-      return `Tickspeed: ${format(this.tickspeed, 2, 3)} / sec`;
+      return this.$t("tickSpeedDisplay", { tps: format(this.tickspeed, 2, 3) });
     },
     continuumString() {
       return formatFloat(this.continuumValue, 2);
     },
     upgradeCount() {
       const purchased = this.purchasedTickspeed;
-      if (!this.freeTickspeed) return quantifyInt("Purchased Upgrade", purchased);
+      if (!this.freeTickspeed) return this.$tc("message.purchasedUpgrade", purchased, { purchased });
       if (purchased === 0 || this.isContinuumActive) return `${formatInt(this.freeTickspeed)} Free Upgrades`;
       return `${formatInt(purchased)} Purchased + ${formatInt(this.freeTickspeed)} Free`;
     }
@@ -91,7 +91,7 @@ export default {
           Tickspeed Unpurchasable (EC 9)
         </span>
         <span v-else>
-          Tickspeed Cost: {{ format(cost) }}
+          {{ $t("message.tickSpeedCost", { cost: format(cost)}) }}
         </span>
         <div
           v-if="hasTutorial"
@@ -104,7 +104,7 @@ export default {
         :class="{ 'o-primary-btn--disabled': !isAffordable && !isContinuumActive }"
         onclick="buyMaxTickSpeed()"
       >
-        Buy Max
+        {{ $t("message.buyMax") }}
       </button>
     </div>
     <div

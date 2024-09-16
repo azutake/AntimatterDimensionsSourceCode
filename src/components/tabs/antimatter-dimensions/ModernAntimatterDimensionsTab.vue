@@ -70,7 +70,7 @@ export default {
     },
     getUntil10Display() {
       if (this.isContinuumActive) return "Continuum";
-      return this.buyUntil10 ? "Until 10" : "Buy 1";
+      return this.buyUntil10 ? this.$t("dimension.until10") : this.$t("dimension.buy1");
     },
     update() {
       this.hasDimensionBoosts = player.dimensionBoosts > 0;
@@ -84,7 +84,7 @@ export default {
 
       this.buy10Mult.copyFrom(AntimatterDimensions.buyTenMultiplier);
 
-      this.multiplierText = `Buy 10 Dimension purchase multiplier: ${formatX(this.buy10Mult, 2, 2)}`;
+      this.multiplierText = this.$t("tabs.dimensions.multiplierText", { mult: formatX(this.buy10Mult, 2, 2) });
       if (!isSacrificeUnlocked) return;
       this.isFullyAutomated = Autobuyer.sacrifice.isActive && Achievement(118).isUnlocked;
       this.isSacrificeAffordable = Sacrifice.canSacrifice && !this.isFullyAutomated;
@@ -116,17 +116,21 @@ export default {
         class="o-primary-btn--sacrifice"
         @click="sacrifice"
       >
-        <span v-if="isSacrificeAffordable">Dimensional Sacrifice ({{ formatX(sacrificeBoost, 2, 2) }})</span>
-        <span v-else-if="isFullyAutomated && disabledCondition !== ''">
-          Dimensional Sacrifice is Automated (Achievement 118)
+        <span v-if="isSacrificeAffordable">
+          {{ $t("tabs.dimensions.dimensionalSacrifice.enabledHeader", { count: formatX(sacrificeBoost, 2, 2) }) }}
         </span>
-        <span v-else>Dimensional Sacrifice Disabled ({{ disabledCondition }})</span>
+        <span v-else-if="isFullyAutomated && disabledCondition !== ''">
+          {{ $t("tabs.dimensions.dimensionalSacrifice.automatedHeader") }}
+        </span>
+        <span v-else>
+          {{ $t("tabs.dimensions.dimensionalSacrifice.disabledHeader", { condition: disabledCondition }) }}
+        </span>
       </PrimaryButton>
       <button
         class="o-primary-btn l-button-container"
         @click="maxAll"
       >
-        Max All (M)
+        {{ $t("tabs.dimensions.maxAll") }}
       </button>
     </div>
     <span>{{ multiplierText }}</span>

@@ -1,0 +1,1029 @@
+{
+  "message": {
+    "clickForInfo": "遊び方を見る",
+    "haveAntimatter": "反物質(AM)を {antimatter} 所有",
+    "gettingAntimatterPerSec": "{antimatter} AM/s",
+    "totalTickSpeed": "時間加速:{tickSpeed}/s",
+    "adsProduceFasterPerTickSpeedUpgrade": "時間加速を購入する度、反物質次元の生成に{rate}",
+    "tickSpeedUpgradesGiveToAllAds": "時間加速を購入する度、全ての次元に{rate}",
+    "pressKeyToOpenHotkeyList": "{question}キーを押してホットキーリストを開く",
+    "tickSpeedCost": "時間加速 コスト:{cost}",
+    "tickSpeedDisplay": "Tickspeed: {tps} / sec",
+    "buyMax": "最大まで購入",
+    "purchasedUpgrade": "{purchased}所有"
+  },
+  "options": {
+    "exportSave": "セーブを出力",
+    "importSave": "セーブをロード",
+    "resetTheGame": "ゲームを初期化",
+    "saveGame": "ゲームを保存",
+    "chooseSave": "セーブを選択",
+    "autoSaveInterval": "オートセーブの間隔:{interval}秒",
+    "exportSaveAsFile": "セーブをファイルとして出力",
+    "importSaveFromFile": "セーブをファイルからロード",
+    "displayTimeSinceSave": "セーブからの経過時間を表示:"
+  },
+  "modals": {
+    "common": {
+      "cancel": "キャンセル",
+      "confirm": "決定",
+      "confirmationCheck": {
+        "dontShowMessageAgain": "このメッセージを再び表示しない",
+        "tooltip": {
+          "enable": "{name}の確認メッセージを再び表示するようにする",
+          "disable": "{name}の確認メッセージを表示しないようにする"
+        }
+      }
+    },
+    "hotKey": {
+      "header": "ホットキー一覧",
+      "modifierKey": "修飾キー",
+      "modifierKeyDescription": "Shift is a modifier key that shows additional information on certain things and adjusts the function of certain buttons.",
+      "autobuyerControls": "自動購入の切り替え",
+      "autobuyerControlsDescription": "Alt is a modifier key that, when pressed in conjunction with any key that has a corresponding autobuyer, will toggle said autobuyer.<br>When pressing both Alt and Shift, you can toggle buying singles or buying max for the Antimatter Dimension and Tickspeed Autobuyers instead.",
+      "tabMovement": "タブ移動",
+      "tabMovementDescription": "Using the Arrow Keys will cycle you through the game's pages. The Up and Down arrows cycle you through tabs, and the Left and Right arrows cycle you through that tab's subtabs.",
+      "numpadSupport": "テンキーサポート",
+      "numpadSupportDescription": "Due to technical reasons, pressing a numpad key will purchase 10 of a Dimension if possible, but pressing a numpad key with {SHIFT} will not buy a single Dimension. It may instead, depending on your device, cause the page to scroll or change game tabs. {ALT} will still work as expected.",
+      "windowZoom": "ウィンドウズーム",
+      "fullscreen": "全画面",
+      "buy1Dimension": "次元を1購入",
+      "buy10Dimensions": "次元を10購入"
+    },
+    "dimensionBoost": {
+      "header": "次元加速を行おうとしています",
+      "withReset": "反物質と反物質次元がリセットされます。本当によろしいですか？",
+      "withoutReset": "反物質と反物質次元がリセットされるのを防ぐアップグレードがあるため、リセットは行われません。次元加速による倍率は通常通り得られます"
+    },
+    "sacrifice": {
+      "header": "次元昇華",
+      "over9000Message": "Dimensional Sacrifice will give you a boost to the 8th Antimatter Dimension based on the amount of 1st Antimatter Dimensions you had at the time of Sacrificing.",
+      "message": "次元昇華を行うと、第1から第7までの反物質次元が全て取り除かれます（コストと乗数は引継ぎます）。そのため、生成量を回復するには時間がかかります。代わりに、昇華した第1反物質次元の総量に基づいて第8反物質次元へのブーストが得られます。",
+      "multiplier": "現在の倍率は{current}で、次元昇華を行うと{next}に増加します。"
+    }
+  },
+  "common": {
+    "requires": "解放条件:{name}{unit}を{amount}所有",
+    "unit": {
+      "antimatterDimensionMiddle": "次元"
+    },
+    "time": {
+      "second": "{s}秒"
+    }
+  },
+  "enumeration": {
+    "twoCombine": "{0}と{1}",
+    "multiple": {
+      "separator": "、 ",
+      "combine": "{before}、そして{last}"
+    }
+  },
+  "names": {
+    "dimension": "Dimension | Dimensions",
+    "antimatterDimension": "Antimatter Dimension | Antimatter Dimensions",
+    "antimatterGalaxy": {
+      "normal": "Antimatter Galaxy | Antimatter Galaxies",
+      "distant": "Distant Antimatter Galaxy | Distant Antimatter Galaxies",
+      "remote": "Remote Antimatter Galaxy | Remote Antimatter Galaxies"
+    }
+  },
+  "tabs": {
+    "dimensions": {
+      "name": "次元",
+      "progressBar": {
+        "tooltip": {
+          "specialRun": {
+            "antimatterChallenge": "チャレンジのクリア率",
+            "eternityChallenge": {
+              "nextChallenge": "Percentage to next Challenge completion",
+              "fullyCompleted": "This Challenge is already fully completed!",
+              "eternityChallengeGoal": "Percentage to Eternity Challenge goal"
+            },
+            "dilation": {
+              "gainMoreTpInDilation": "Percentage to gain more TP in Dilation",
+              "eternityInDilation": "Percentage to Eternity in Dilation"
+            },
+            "destabilizedReality": "Percentage to Destabilized Reality"
+          },
+          "nextTesseract": "Percentage to next Tesseract",
+          "galaxyGenerator": "Percentage to Galaxy Generator",
+          "fifthStrike": "Percentage to fifth Strike",
+          "fourthStrike": "Percentage to fourth Strike",
+          "thirdStrike": "Percentage to third Strike",
+          "secondStrike": "Percentage to second Strike",
+          "firstStrike": "Percentage to first Strike",
+          "infinity": "無限までの進行度",
+          "reality": "現実までの進行度",
+          "eternity": "永遠までの進行度"
+        }
+      },
+      "maxAll": "最大まで購入(M)",
+      "multiplierText": "次元を10購入する度、その次元に{mult}",
+      "dimensionBoost": {
+        "header": "次元加速({count})",
+        "unlock": {
+          "dimension": "{dimsShort}次元の解放",
+          "sacrifice": "次元昇華の解放"
+        },
+        "multiplier": "{mult}",
+        "dimensionRange": {
+          "1st": "第1次元",
+          "partial": "1-{last}の次元",
+          "all": "全ての次元"
+        },
+        "effect": {
+          "withoutUnlock": "{dimRange}に{mult}",
+          "withUnlock": "{unlock}と、{dimRange}に{mult}"
+        },
+        "resetDimension": "反物質次元をリセットして{effects}"
+      },
+      "antimatterGalaxy": {
+        "header": "{typeName} ({count})"
+      },
+      "dimensionalSacrifice": {
+        "enabledHeader": "次元昇華({count})",
+        "disabledHeader": "次元昇華 無効({condition})",
+        "automatedHeader": "次元昇華は実績188によって自動化されています"
+      }
+    },
+    "options": {
+      "name": "設定"
+    },
+    "statistics": {
+      "name": "統計"
+    },
+    "achievements": {
+      "name": "実績"
+    },
+    "automation": {
+      "name": "自動化",
+      "toggleAutobuyers": {
+        "on": "自動購入停止",
+        "off": "自動購入再開"
+      },
+      "toggleAllAutoBuyers": {
+        "on": "全ての自動購入をオン",
+        "off": "全ての自動購入をオフ"
+      },
+      "gameSpeedDescription": "自動購入の間隔や時間に基づく設定は常に<b>リアルタイム</b>であり、<br>ゲームの進行速度に影響を与える要因に左右されることはありません。",
+      "autobuyerChallengeUnlock": "自動購入をアップグレードするためのチャレンジは、無限に到達すると解放されます。",
+      "unlimitedAutobuyerBulk": "購入単位が表示されていない自動購入は、デフォルトで無制限です。",
+      "autobuyerBulkUpgrade": "反物質次元の自動購入は、間隔が{ms}ミリ秒未満になると一度の購入単位をアップグレードできます。",
+      "instantAutobuyerTrigger": "間隔が'即時'の自動購入は、ゲーム処理時間({gameTickLength})ごとに発動します。",
+      "requirement": "解放条件:合計{cost} AM所有{eternity}",
+      "interval": {
+        "currentInterval": "間隔:{interval}",
+        "currentBulk": "単位:{bulk}",
+        "instant": "即時",
+        "unlimited": "無制限",
+        "needChallenge": "チャレンジの完了が必要"
+      },
+      "dimension": {
+        "name": "{dimName}次元を自動で購入",
+        "mode": {
+          "buySingle": "1個単位で購入",
+          "buy10": "最大まで購入"
+        }
+      }
+    },
+    "challenges": {
+      "name": "チャレンジ"
+    },
+    "infinity": {
+      "name": "無限"
+    },
+    "eternity": {
+      "name": "永遠"
+    },
+    "reality": {
+      "name": "現実"
+    },
+    "celestials": {
+      "name": "天体"
+    },
+    "shop": {
+      "name": "ショップ"
+    }
+  },
+  "dimension": {
+    "name": "{shortName}次元",
+    "displayNames": {
+      "1": "First",
+      "2": "Second",
+      "3": "Third",
+      "4": "Fourth",
+      "5": "Fifth",
+      "6": "Sixth",
+      "7": "Seventh",
+      "8": "Eighth"
+    },
+    "shortDisplayNames": {
+      "1": "第1",
+      "2": "第2",
+      "3": "第3",
+      "4": "第4",
+      "5": "第5",
+      "6": "第6",
+      "7": "第7",
+      "8": "第8"
+    },
+    "continuum": "Continuum",
+    "until10": "10個単位",
+    "buy1": "1個単位",
+    "costUnit": "{shortName} AD",
+    "cost": "コスト：",
+    "button": {
+      "locked": "ロック中",
+      "capped": "Shattered by Nameless",
+      "continuum": "Continuum: ",
+      "buy": "{howMany}個購入",
+      "tooltip": "{count}個所有"
+    }
+  },
+  "sacrifice": {
+    "disabledCondition": {
+      "8thDimensionsDisabled": "8th Dimensions are disabled",
+      "eternityChallenge3": "Eternity Challenge 3",
+      "requiresBoost": "次元加速が{count}必要",
+      "no8thAD": "第8次元が必要",
+      "challengeGoalReached": "チャレンジ目標達成",
+      "needToCrunch": "クランチが必要",
+      "multiplier": "倍率{mult}"
+    }
+  },
+  "hotKeys": {
+    "toggleAutobuyers": "自動購入の切り替え",
+    "buyOneTickspeed": "次元加速を1購入",
+    "buyMaxTickspeed": "次元加速を最大まで購入",
+    "maxAll": "全て最大まで購入",
+    "dimensionalSacrifice": "次元昇華",
+    "dimensionBoost": "次元加速",
+    "singleDimensionBoost": "Single Dimension Boost",
+    "antimatterGalaxy": "反物質銀河",
+    "singleAntimatterGalaxy": "Single Antimatter Galaxy",
+    "bigCrunch": "ビッグクランチ",
+    "replicantiGalaxy": "複製銀河",
+    "eternity": "エターニティ",
+    "toggleTimeStudyRespec": "タイムスタディのリスペックの切り替え",
+    "enterExitDilation": "ディレイションの切り替え",
+    "reality": "リアリティ",
+    "toggleGlyphUnequip": "グリフの切り替え",
+    "startPauseAutomator": "オートメーターの切り替え",
+    "restartAutomator": "オートメーターのリスタート",
+    "undoEditAutomator": "Undo Edit (Automator)",
+    "redoEditAutomator": "Redo Edit (Automator)",
+    "toggleBlackHole": "ブラックホールの切り替え",
+    "toggleContinuum": "コンティニュアムの切り替え",
+    "armageddon": "アルマゲドン",
+    "toggleGlyphUnequipPelle": "Toggle Glyph unequip (Pelle)",
+    "saveGame": "ゲームを保存",
+    "exportGame": "ゲームを出力",
+    "openHotkeyListModal": "Open Hotkey List Modal",
+    "openHowToPlayModal": "Open How To Play Modal",
+    "modifyVisibleTabs": "Modify visible tabs",
+    "confirmModal": "Confirm Modal",
+    "closeModalOrOpenOptions": "Close Modal or open Options",
+    "playingRespects": "Paying respects",
+    "changeTab": "タブの切り替え",
+    "changeSubtab": "サブタブの切り替え",
+    "doesntExist": "存在しない",
+    "adjustAutobuyers": "Adjust Autobuyers",
+    "fullscreen": "全画面",
+    "zoomIn": "拡大",
+    "zoomOut": "縮小",
+    "resetZoom": "拡縮をリセット"
+  },
+  "util": {
+    "saveTimer": {
+      "disabled": "オートセーブが無効です。このままセーブせずに終了すると進行状況が失われます",
+      "lastSave": "最終セーブからの経過時間:{time}"
+    }
+  },
+  "achievements": {
+    "normal": {
+      "11": {
+        "name": "千里の道も一歩から",
+        "description": "第1次元を購入する"
+      },
+      "12": {
+        "name": "反物質100個は多い",
+        "description": "第2次元を購入する"
+      },
+      "13": {
+        "name": "Half-life 3は確定している",
+        "description": "第3次元を購入する"
+      },
+      "14": {
+        "name": "L4D: Left 4 Dimensions",
+        "description": "第4次元を購入する"
+      },
+      "15": {
+        "name": "5次元反物質パンチ",
+        "description": "第5次元を購入する"
+      },
+      "16": {
+        "name": "私たちには9のための余裕はなかった",
+        "description": ""
+      },
+      "17": {
+        "name": "運に左右されない実績",
+        "description": "第7次元を購入する"
+      },
+      "18": {
+        "name": "90°は無限",
+        "description": ""
+      },
+      "21": {
+        "name": "無限だ!",
+        "description": ""
+      },
+      "22": {
+        "name": "フェイクニュース!",
+        "description": ""
+      },
+      "23": {
+        "name": "第9次元は嘘",
+        "description": ""
+      },
+      "24": {
+        "name": "反物質アポカリプス",
+        "description": ""
+      },
+      "25": {
+        "name": "もっと先へ、加速したくはないか",
+        "description": ""
+      },
+      "26": {
+        "name": "壁越えは成功だ",
+        "description": "反物質銀河を購入する"
+      },
+      "27": {
+        "name": "ふたつの銀河",
+        "description": ""
+      },
+      "28": {
+        "name": "焼け石に水",
+        "description": ""
+      },
+      "31": {
+        "name": "弱くするのを忘れてた",
+        "description": ""
+      },
+      "32": {
+        "name": "神も満足",
+        "description": ""
+      },
+      "33": {
+        "name": "無限がいっぱい",
+        "description": ""
+      },
+      "34": {
+        "name": "なくてもなんとかなる",
+        "description": "第8反物質次元を所持せず無限に到達する"
+      },
+      "35": {
+        "name": "寝るな",
+        "description": ""
+      },
+      "36": {
+        "name": "閉所恐怖症",
+        "description": ""
+      },
+      "37": {
+        "name": "速い!",
+        "description": ""
+      },
+      "38": {
+        "name": "神は死んだ",
+        "description": ""
+      },
+      "41": {
+        "name": "DLCは必要ない",
+        "description": ""
+      },
+      "42": {
+        "name": "スーパーサニック",
+        "description": ""
+      },
+      "43": {
+        "name": "反物質のテーブルはどうやって反転させられたのか…",
+        "description": ""
+      },
+      "44": {
+        "name": "30秒以上",
+        "description": ""
+      },
+      "45": {
+        "name": "ポテトより速い",
+        "description": ""
+      },
+      "46": {
+        "name": "多次元",
+        "description": ""
+      },
+      "47": {
+        "name": "命知らず",
+        "description": ""
+      },
+      "48": {
+        "name": "チャレンジアンチ",
+        "description": ""
+      },
+      "51": {
+        "name": "リミットブレイク",
+        "description": ""
+      },
+      "52": {
+        "name": "自動化の時代",
+        "description": "反物質次元と時間加速の自動購入間隔を最大にする"
+      },
+      "53": {
+        "name": "絶対そんな価値はない",
+        "description": "Max the intervals for all normal autobuyers."
+      },
+      "54": {
+        "name": "速すぎる！",
+        "description": ""
+      },
+      "55": {
+        "name": "無限はそんなに大きくない",
+        "description": ""
+      },
+      "56": {
+        "name": "死者多数",
+        "description": ""
+      },
+      "57": {
+        "name": "神々からの贈り物",
+        "description": ""
+      },
+      "58": {
+        "name": "This is fine.",
+        "description": ""
+      },
+      "61": {
+        "name": "バルクアップ",
+        "description": ""
+      },
+      "62": {
+        "name": "え…まだここにいたの?",
+        "description": ""
+      },
+      "63": {
+        "name": "新たな始まり",
+        "description": "無限エネルギーの生産を始める"
+      },
+      "64": {
+        "name": "死者ゼロ",
+        "description": "ノーマルチャレンジ中に次元加速や反物質銀河を使わずに無限に到達する"
+      },
+      "65": {
+        "name": "チャレンジというほどではない",
+        "description": ""
+      },
+      "66": {
+        "name": "ポテトの2乗より速い",
+        "description": ""
+      },
+      "67": {
+        "name": "無限の挑戦",
+        "description": "無限チャレンジをクリアする"
+      },
+      "68": {
+        "name": "実績のためだけにもう一度やったでしょ?",
+        "description": ""
+      },
+      "71": {
+        "name": "909エラー:次元が見つかりませんでした",
+        "description": "第2次元自動購入チャレンジ中に第1次元が1のみで無限に到達する"
+      },
+      "72": {
+        "name": "Can't hold all these infinities",
+        "description": ""
+      },
+      "73": {
+        "name": "THIS ACHIEVEMENT DOESN'T EXIST",
+        "description": "",
+        "reward": "Antimatter Dimensions gain a multiplier based on current antimatter."
+      },
+      "74": {
+        "name": "Not a second lost",
+        "description": ""
+      },
+      "75": {
+        "name": "NEW DIMENSIONS???",
+        "description": "Unlock the 4th Infinity Dimension.",
+        "reward": "Your Achievement bonus affects Infinity Dimensions."
+      },
+      "76": {
+        "name": "One for each dimension",
+        "description": "",
+        "reward": "Extremely small multiplier to Antimatter Dimensions based on time played."
+      },
+      "77": {
+        "name": "1 Million is a lot",
+        "description": ""
+      },
+      "78": {
+        "name": "Blink of an eye",
+        "description": ""
+      },
+      "81": {
+        "name": "Game Design Is My Passion",
+        "description": ""
+      },
+      "82": {
+        "name": "Anti-antichallenged",
+        "description": ""
+      },
+      "83": {
+        "name": "YOU CAN GET 50 GALAXIES?!?!",
+        "description": ""
+      },
+      "84": {
+        "name": "I got a few to spare",
+        "description": ""
+      },
+      "85": {
+        "name": "ALL YOUR IP ARE BELONG TO US",
+        "description": ""
+      },
+      "86": {
+        "name": "Do you even bend time bro?",
+        "description": ""
+      },
+      "87": {
+        "name": "2 MILLION INFINITIES",
+        "description": ""
+      },
+      "88": {
+        "name": "Yet another infinity reference",
+        "description": ""
+      },
+      "91": {
+        "name": "Ludicrous Speed",
+        "description": ""
+      },
+      "92": {
+        "name": "I brake for NOBODY!",
+        "description": ""
+      },
+      "93": {
+        "name": "MAXIMUM OVERDRIVE",
+        "description": ""
+      },
+      "94": {
+        "name": "4.3333 minutes of Infinity",
+        "description": "",
+        "reward": "Double Infinity Power gain."
+      },
+      "95": {
+        "name": "Is this safe?",
+        "description": ""
+      },
+      "96": {
+        "name": "Time is relative",
+        "description": "Go Eternal."
+      },
+      "97": {
+        "name": "Like jumping on a lego",
+        "description": ""
+      },
+      "98": {
+        "name": "0 degrees from Infinity",
+        "description": "Unlock the 8th Infinity Dimension."
+      },
+      "101": {
+        "name": "8 nobody got time for that",
+        "description": "Eternity without buying Antimatter Dimensions 1-7."
+      },
+      "102": {
+        "name": "This mile took an eternity",
+        "description": "Get all Eternity milestones."
+      },
+      "103": {
+        "name": "Tätä saavutusta ei ole olemassa II",
+        "description": ""
+      },
+      "104": {
+        "name": "That wasn't an eternity",
+        "description": ""
+      },
+      "105": {
+        "name": "Infinite Time",
+        "description": "",
+        "reward": "Time Dimensions gain a multiplier based on tickspeed."
+      },
+      "106": {
+        "name": "The swarm",
+        "description": ""
+      },
+      "107": {
+        "name": "Do you really need a guide for this?",
+        "description": ""
+      },
+      "108": {
+        "name": "We COULD afford 9",
+        "description": ""
+      },
+      "111": {
+        "name": "Yo dawg, I heard you liked infinities...",
+        "description": "",
+        "reward": "Your antimatter doesn't reset on Dimension Boosts or Antimatter Galaxies."
+      },
+      "112": {
+        "name": "Never again",
+        "description": ""
+      },
+      "113": {
+        "name": "Eternities are the new infinity",
+        "description": ""
+      },
+      "114": {
+        "name": "You're a mistake",
+        "description": "Fail an Eternity Challenge.",
+        "reward": "A fading sense of accomplishment."
+      },
+      "115": {
+        "name": "I wish I had gotten 7 eternities",
+        "description": "Start an Infinity Challenge inside an Eternity Challenge."
+      },
+      "116": {
+        "name": "Do I really need to infinity",
+        "description": "",
+        "reward": "Multiplier to Infinity Points based on Infinities."
+      },
+      "117": {
+        "name": "Costco sells Dimboosts now!",
+        "description": ""
+      },
+      "118": {
+        "name": "IT'S OVER 9000",
+        "description": "",
+        "reward": "Dimensional Sacrifice doesn't reset your Antimatter Dimensions and the Autobuyer activates every tick if turned on."
+      },
+      "121": {
+        "name": "Can you get infinite IP?",
+        "description": ""
+      },
+      "122": {
+        "name": "You're already dead.",
+        "description": "Eternity without buying Antimatter Dimensions 2-8."
+      },
+      "123": {
+        "name": "5 more eternities until the update",
+        "description": ""
+      },
+      "124": {
+        "name": "Long lasting relationship",
+        "description": ""
+      },
+      "125": {
+        "name": "Like feasting on a behind",
+        "description": ""
+      },
+      "126": {
+        "name": "Popular music",
+        "description": ""
+      },
+      "127": {
+        "name": "But I wanted another prestige layer...",
+        "description": ""
+      },
+      "128": {
+        "name": "What do I have to do to get rid of you",
+        "description": ""
+      },
+      "131": {
+        "name": "No ethical consumption",
+        "description": ""
+      },
+      "132": {
+        "name": "Unique snowflakes",
+        "description": "",
+        "reward": "Gain a multiplier to Tachyon Particle and Dilated Time gain based on Antimatter Galaxies."
+      },
+      "133": {
+        "name": "I never liked this infinity stuff anyway",
+        "description": "",
+        "reward": "You start Eternities with all Infinity Challenges unlocked and completed."
+      },
+      "134": {
+        "name": "When will it be enough?",
+        "description": ""
+      },
+      "135": {
+        "name": "Faster than a potato^286078",
+        "description": ""
+      },
+      "136": {
+        "name": "I told you already, time is relative",
+        "description": "Dilate time."
+      },
+      "137": {
+        "name": "Now you're thinking with dilation!",
+        "description": ""
+      },
+      "138": {
+        "name": "This is what I have to do to get rid of you.",
+        "description": "",
+        "reward": "Removes the downsides from Time Study 131 and 133 in the Active and Idle Time Study paths."
+      },
+      "141": {
+        "name": "Snap back to reality",
+        "description": "Make a new Reality."
+      },
+      "142": {
+        "name": "How does this work?",
+        "description": "Unlock the automator."
+      },
+      "143": {
+        "name": "Yo dawg, I heard you liked reskins...",
+        "description": "",
+        "reward": "Galaxies no longer reset Dimension Boosts."
+      },
+      "144": {
+        "name": "Is this an Interstellar reference?",
+        "description": "Unlock the Black Hole."
+      },
+      "145": {
+        "name": "Are you sure these are the right way around?",
+        "description": "Have either Black Hole interval smaller than its duration."
+      },
+      "146": {
+        "name": "Perks of living",
+        "description": "Have all Perks bought."
+      },
+      "147": {
+        "name": "Master of Reality",
+        "description": "Have all Reality upgrades bought.",
+        "reward": "Unlock Teresa, the Celestial of Reality."
+      },
+      "148": {
+        "name": "Royal flush",
+        "description": "Reality with one of each basic Glyph type.",
+        "reward": "Gained Glyph level is increased by number of distinct Glyph types equipped."
+      },
+      "151": {
+        "name": "You really didn't need it anyway",
+        "description": "",
+        "reward": "Unlock V, the Celestial of Achievements."
+      },
+      "152": {
+        "name": "Y'all got any more of them Glyphs?",
+        "description": ""
+      },
+      "153": {
+        "name": "",
+        "description": "Reality without producing antimatter."
+      },
+      "154": {
+        "name": "I am speed",
+        "description": ""
+      },
+      "155": {
+        "name": "Achievement #15983",
+        "description": ""
+      },
+      "156": {
+        "name": "College Dropout",
+        "description": "Reality without buying Time Theorems."
+      },
+      "157": {
+        "name": "It's super effective!",
+        "description": ""
+      },
+      "158": {
+        "name": "Bruh, are you like, inside the hole?",
+        "description": ""
+      },
+      "161": {
+        "name": "that's where you're wrong kiddo",
+        "description": ""
+      },
+      "162": {
+        "name": "Reinstalled the game and rejoined the server",
+        "description": "Have every Time Study at once."
+      },
+      "163": {
+        "name": "Actually, super easy! Barely an inconvenience!",
+        "description": ""
+      },
+      "164": {
+        "name": "Infinity times two",
+        "description": ""
+      },
+      "165": {
+        "name": "Perfectly balanced",
+        "description": ""
+      },
+      "166": {
+        "name": "Nicenice.",
+        "description": ""
+      },
+      "167": {
+        "name": "Mr. Layer? Sorry, you're not on the list",
+        "description": "",
+        "reward": "Gain more Reality Machines based on your current Reality Machines."
+      },
+      "168": {
+        "name": "Woah, we're halfway there",
+        "description": ""
+      },
+      "171": {
+        "name": "The god is delighted",
+        "description": "Sacrifice every sacrificable Glyph type at least once."
+      },
+      "172": {
+        "name": "Hitchhiker's Guide to Reality",
+        "description": ""
+      },
+      "173": {
+        "name": "Cet accomplissement n'existe pas III",
+        "description": ""
+      },
+      "174": {
+        "name": "Don't you already have two of these?",
+        "description": "Get a Singularity."
+      },
+      "175": {
+        "name": "The First Antihistorian",
+        "description": ""
+      },
+      "176": {
+        "name": "Mom counted to 3",
+        "description": "Annihilate your Dark Matter Dimensions."
+      },
+      "177": {
+        "name": "This mile took a celestial",
+        "description": "Complete all Singularity Milestones at least once."
+      },
+      "178": {
+        "name": "Destroyer of Worlds",
+        "description": ""
+      },
+      "181": {
+        "name": "Antimatter Dimensions Eternal",
+        "description": "Doom your Reality."
+      },
+      "182": {
+        "name": "One more time",
+        "description": "Permanently gain back all Antimatter Dimension autobuyers."
+      },
+      "183": {
+        "name": "Déjà vOoM",
+        "description": "Complete Infinity Challenge 5 while Doomed."
+      },
+      "184": {
+        "name": "You're out!",
+        "description": "Encounter the third Pelle Strike."
+      },
+      "185": {
+        "name": "Four score and seven years ago",
+        "description": "Encounter the fourth Pelle Strike."
+      },
+      "186": {
+        "name": "An unhealthy obsession",
+        "description": "Purchase Time Study 181 while Doomed."
+      },
+      "187": {
+        "name": "The One with Dilated Time",
+        "description": "Unlock Dilation while Doomed."
+      },
+      "188": {
+        "name": "The End",
+        "description": "Beat the game."
+      }
+    },
+    "secret": {
+      "11": {
+        "name": "The first one's always free",
+        "description": "Click on this Achievement."
+      },
+      "12": {
+        "name": "Just in case",
+        "description": ""
+      },
+      "13": {
+        "name": "It pays to have respect",
+        "description": "Pay respects."
+      },
+      "14": {
+        "name": "So do I",
+        "description": "Say something naughty."
+      },
+      "15": {
+        "name": "Do a barrel roll!",
+        "description": "Do a barrel roll."
+      },
+      "16": {
+        "name": "Do you enjoy pain?",
+        "description": ""
+      },
+      "17": {
+        "name": "30 Lives",
+        "description": "Input the konami code."
+      },
+      "18": {
+        "name": "Do you feel lucky? Well do ya punk?",
+        "description": ""
+      },
+      "21": {
+        "name": "Go study in real life instead",
+        "description": "Purchase the secret Time Study."
+      },
+      "22": {
+        "name": "Deep fried",
+        "description": ""
+      },
+      "23": {
+        "name": "Stop right there criminal scum!",
+        "description": "Open the console."
+      },
+      "24": {
+        "name": "Real news",
+        "description": "Click on a news ticker message that does something when you click on it."
+      },
+      "25": {
+        "name": "Shhh... It's a secret",
+        "description": "Discover a secret theme."
+      },
+      "26": {
+        "name": "You're a failure",
+        "description": ""
+      },
+      "27": {
+        "name": "It's not called matter dimensions is it?",
+        "description": "Get Infinite matter."
+      },
+      "28": {
+        "name": "Nice.",
+        "description": "Don't act like you don't know what you did."
+      },
+      "31": {
+        "name": "You should download some more RAM",
+        "description": ""
+      },
+      "32": {
+        "name": "Less than or equal to 0.001",
+        "description": ""
+      },
+      "33": {
+        "name": "A sound financial decision",
+        "description": "Click on the button to purchase STD coins."
+      },
+      "34": {
+        "name": "You do know how these work, right?",
+        "description": "Respec with an empty Time Study Tree."
+      },
+      "35": {
+        "name": "Should we tell them about buy max...",
+        "description": ""
+      },
+      "36": {
+        "name": "While you were away... Nothing happened.",
+        "description": "See nothing happen while you were away."
+      },
+      "37": {
+        "name": "You followed the instructions",
+        "description": "Follow instructions."
+      },
+      "38": {
+        "name": "Knife's edge",
+        "description": "Close the Hard Reset modal after typing in the confirmation."
+      },
+      "41": {
+        "name": "That dimension doesn’t exist",
+        "description": "Try to purchase the 9th dimension."
+      },
+      "42": {
+        "name": "SHAME ON ME",
+        "description": "Try to use EC12 to speed up time."
+      },
+      "43": {
+        "name": "A cacophonous chorus",
+        "description": "Have all equipped Glyphs be Music Glyphs."
+      },
+      "44": {
+        "name": "Are you statisfied now?",
+        "description": ""
+      },
+      "45": {
+        "name": "This dragging is dragging on",
+        "description": "Drag the Perks around for a minute."
+      },
+      "46": {
+        "name": "For a rainy day",
+        "description": "Store a day of real time."
+      },
+      "47": {
+        "name": "ALT+",
+        "description": "Hide every possible tab."
+      },
+      "48": {
+        "name": "Stack overflow",
+        "description": "Have more Automator errors than lines."
+      }
+    }
+  }
+}

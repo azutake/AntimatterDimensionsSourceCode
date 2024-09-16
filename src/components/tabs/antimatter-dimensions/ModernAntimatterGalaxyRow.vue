@@ -52,9 +52,9 @@ export default {
     },
     typeName() {
       switch (this.type) {
-        case GALAXY_TYPE.NORMAL: return "Antimatter Galaxies";
-        case GALAXY_TYPE.DISTANT: return "Distant Antimatter Galaxies";
-        case GALAXY_TYPE.REMOTE: return "Remote Antimatter Galaxies";
+        case GALAXY_TYPE.NORMAL: return this.$t("names.antimatterGalaxy.normal");
+        case GALAXY_TYPE.DISTANT: return this.$t("names.antimatterGalaxy.distant");
+        case GALAXY_TYPE.REMOTE: return this.$t("names.antimatterGalaxy.remote");
       }
       return undefined;
     },
@@ -122,8 +122,10 @@ export default {
 
 <template>
   <div class="reset-container galaxy">
-    <h4>{{ typeName }} ({{ sumText }})</h4>
-    <span>Requires: {{ formatInt(requirement.amount) }} {{ dimName }} Antimatter D</span>
+    <h4>{{ $t("tabs.dimensions.antimatterGalaxy.header", { typeName: $tc(typeName, 1), count: sumText }) }}</h4>
+    <span>{{ $t("common.requires", {
+      amount: formatInt(requirement.amount), name: $t(dimName), unit: $t("common.unit.antimatterDimensionMiddle")
+    }) }}</span>
     <span v-if="hasIncreasedScaling">{{ costScalingText }}</span>
     <button
       :class="classObject"

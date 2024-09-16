@@ -43,12 +43,12 @@ export default {
       this.hasNotification = this.tab.hasNotification;
       if (this.tabPosition < Pelle.endTabNames.length) {
         this.tabName = Pelle.transitionText(
-          this.tab.name,
+          this.$t(`tabs.${this.tab.key}.name`),
           Pelle.endTabNames[this.tabPosition],
           Math.clamp(GameEnd.endState - (this.tab.id % 4) / 10, 0, 1)
         );
       } else {
-        this.tabName = this.tab.name;
+        this.tabName = this.$t(`tabs.${this.tab.key}.name`);
       }
     },
     isCurrentSubtab(id) {

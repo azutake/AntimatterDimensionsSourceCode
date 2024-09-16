@@ -46,7 +46,7 @@ export default {
         v-if="hasTutorial"
         class="h2p-tooltip"
       >
-        Click for info
+        {{ $t('message.clickForInfo') }}
       </div>
     </div>
     <div
@@ -109,8 +109,9 @@ export default {
   position: absolute;
   top: 0.6rem;
   left: 100%;
-  border-top: 0.5rem solid transparent;
+  border-top: 0.5rem solid trnsparent;
   border-left: 0.5rem solid var(--color-text);
   border-bottom: 0.5rem solid transparent;
 }
 </style>
+

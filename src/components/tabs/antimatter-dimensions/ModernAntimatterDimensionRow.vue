@@ -37,7 +37,7 @@ export default {
   computed: {
     isDoomed: () => Pelle.isDoomed,
     name() {
-      return `${AntimatterDimension(this.tier).shortDisplayName} Antimatter Dimension`;
+      return this.$t("dimension.name", { shortName: this.$t(AntimatterDimension(this.tier).shortDisplayName) });
     },
     costDisplay() {
       return this.buyUntil10 ? format(this.until10Cost) : format(this.singleCost);
@@ -51,21 +51,22 @@ export default {
     boughtTooltip() {
       if (this.isCapped) return `Nameless prevents the purchase of more than ${format(1)} 8th Antimatter Dimension`;
       if (this.isContinuumActive) return "Continuum produces all your Antimatter Dimensions";
-      return `Purchased ${quantifyInt("time", this.bought)}`;
+      return this.$tc("dimension.button.tooltip", this.bought, { count: this.bought });
     },
     costUnit() {
-      return `${AntimatterDimension(this.tier - 2).shortDisplayName} AD`;
+      return this.$t("dimension.costUnit", { shortName: this.$t(AntimatterDimension(this.tier - 2).shortDisplayName) });
     },
     buttonPrefix() {
-      if (!this.isUnlocked) return "Locked";
-      if (this.isCapped) return "Shattered by Nameless";
-      if (this.isContinuumActive) return "Continuum: ";
-      return `Buy ${formatInt(this.howManyCanBuy)}`;
+      if (!this.isUnlocked) return this.$t("dimension.button.locked");
+      if (this.isCapped) return this.$t("dimension.button.capped");
+      if (this.isContinuumActive) return this.$t("dimension.button.continuum");
+      return this.$t("dimension.button.buy", { howMany: formatInt(this.howManyCanBuy) });
     },
     buttonValue() {
       if (this.isCapped) return "";
       if (this.isContinuumActive) return this.continuumString;
-      const prefix = this.showCostTitle(this.buyUntil10 ? this.until10Cost : this.singleCost) ? "Cost: " : "";
+      const prefix = this.showCostTitle(this.buyUntil10 ? this.until10Cost : this.singleCost)
+        ? this.$t("dimension.cost") : "";
       const suffix = this.isCostsAD ? this.costUnit : "AM";
       return `${prefix}${this.costDisplay} ${suffix}`;
     },

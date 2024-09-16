@@ -1,4 +1,5 @@
 import { DC } from "./constants";
+import { i18n } from "./i18n";
 
 class DimBoostRequirement {
   constructor(tier, amount) {
@@ -130,26 +131,38 @@ export class DimBoost {
 
     let newUnlock = "";
     if (!allNDUnlocked && boosts < DimBoost.maxDimensionsUnlockable - 4) {
-      newUnlock = `unlock the ${boosts + 5}th Dimension`;
+      newUnlock = i18n.t("tabs.dimensions.dimensionBoost.unlock.dimension", {
+        dimsShort: i18n.t(`dimension.shortDisplayNames.${boosts + 5}`)
+      });
     } else if (boosts === 4 && !NormalChallenge(10).isRunning && !EternityChallenge(3).isRunning) {
-      newUnlock = "unlock Sacrifice";
+      newUnlock = i18n.t("tabs.dimensions.dimensionBoost.unlock.sacrifice");
     }
+    // 次元をリセットして5次元の解放と、1次元に×2.0の倍率を与える。
 
-    const formattedMultText = `give a ${formatX(DimBoost.power, 2, 1)} multiplier `;
-    let dimensionRange = `to the 1st Dimension`;
-    if (boosts > 0) dimensionRange = `to Dimensions 1-${Math.min(boosts + 1, 8)}`;
-    if (boosts >= DimBoost.maxDimensionsUnlockable - 1) dimensionRange = `to all Dimensions`;
+    const formattedMultText =
+      i18n.t("tabs.dimensions.dimensionBoost.multiplier", { mult: formatX(DimBoost.power, 2, 1) });
+
+    let dimensionRange = i18n.t("tabs.dimensions.dimensionBoost.dimensionRange.1st");
+    if (boosts > 0) dimensionRange = i18n.t("tabs.dimensions.dimensionBoost.dimensionRange.partial", {
+      last: Math.min(boosts + 1, 8)
+    });
+    if (boosts >= DimBoost.maxDimensionsUnlockable - 1)
+      dimensionRange = i18n.t("tabs.dimensions.dimensionBoost.dimensionRange.all");
 
     let boostEffects;
     if (NormalChallenge(8).isRunning) boostEffects = newUnlock;
-    else if (newUnlock === "") boostEffects = `${formattedMultText} ${dimensionRange}`;
-    else boostEffects = `${newUnlock} and ${formattedMultText} ${dimensionRange}`;
+    else if (newUnlock === "") boostEffects = i18n.t("tabs.dimensions.dimensionBoost.effect.withoutUnlock", {
+      mult: formattedMultText, dimRange: dimensionRange
+    });
+    else boostEffects = i18n.t("tabs.dimensions.dimensionBoost.effect.withUnlock", {
+      unlock: newUnlock, mult: formattedMultText, dimRange: dimensionRange
+    });
 
     if (boostEffects === "") return "Dimension Boosts are currently useless";
     const areDimensionsKept = (Perk.antimatterNoReset.isBought || Achievement(111).canBeApplied) &&
       (!Pelle.isDoomed || PelleUpgrade.dimBoostResetsNothing.isBought);
     if (areDimensionsKept) return boostEffects[0].toUpperCase() + boostEffects.substring(1);
-    return `Reset your Dimensions to ${boostEffects}`;
+    return i18n.t("tabs.dimensions.dimensionBoost.resetDimension", { effects: boostEffects });
   }
 
   static get purchasedBoosts() {

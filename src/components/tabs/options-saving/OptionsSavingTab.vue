@@ -124,21 +124,21 @@ export default {
           :class="{ 'o-pelle-disabled-pointer': creditsClosed }"
           onclick="GameStorage.export()"
         >
-          Export save
+          {{ $t("options.exportSave") }}
         </OptionsButton>
         <OptionsButton
           class="o-primary-btn--option_font-x-large"
           :class="{ 'o-pelle-disabled-pointer': creditsClosed }"
           onclick="Modal.import.show()"
         >
-          Import save
+          {{ $t("options.importSave") }}
         </OptionsButton>
         <OptionsButton
           class="o-primary-btn--option_font-x-large"
           :class="{ 'o-pelle-disabled-pointer': creditsClosed }"
           onclick="Modal.hardReset.show()"
         >
-          RESET THE GAME
+          {{ $t("options.resetTheGame") }}
         </OptionsButton>
       </div>
       <div class="l-options-grid__row">
@@ -147,14 +147,14 @@ export default {
           :class="{ 'o-pelle-disabled-pointer': creditsClosed }"
           onclick="GameStorage.save(false, true)"
         >
-          Save game
+          {{ $t("options.saveGame") }}
         </OptionsButton>
         <OptionsButton
           class="o-primary-btn--option_font-x-large"
           :class="{ 'o-pelle-disabled-pointer': creditsClosed }"
           onclick="Modal.loadGame.show()"
         >
-          Choose save
+          {{ $t("options.chooseSave") }}
         </OptionsButton>
         <AutosaveIntervalSlider
           :min="10"
@@ -167,7 +167,7 @@ export default {
           :class="{ 'o-pelle-disabled-pointer': creditsClosed }"
           onclick="GameStorage.exportAsFile()"
         >
-          Export save as file
+          {{ $t("options.exportSaveAsFile") }}
         </OptionsButton>
         <OptionsButton
           class="c-file-import-button"
@@ -179,13 +179,13 @@ export default {
             accept=".txt"
             @change="importAsFile"
           >
-          <label for="file">Import save from file</label>
+          <label for="file">{{ $t("options.importSaveFromFile") }}</label>
         </OptionsButton>
         <PrimaryToggleButton
           v-model="showTimeSinceSave"
           class="o-primary-btn--option l-options-grid__button"
           :class="{ 'o-pelle-disabled-pointer': creditsClosed }"
-          label="Display time since save:"
+          :label="$t('options.displayTimeSinceSave')"
         />
       </div>
       <div class="l-options-grid__row">

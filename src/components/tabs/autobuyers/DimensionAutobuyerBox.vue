@@ -26,12 +26,14 @@ export default {
       return Autobuyer.antimatterDimension(this.tier);
     },
     name() {
-      return `${AntimatterDimension(this.tier).shortDisplayName} Dimension Autobuyer`;
+      return this.$t("tabs.automation.dimension.name", {
+        dimName: this.$t(AntimatterDimension(this.tier).shortDisplayName)
+      });
     },
     modeDisplay() {
       switch (this.mode) {
-        case AUTOBUYER_MODE.BUY_SINGLE: return "Buys singles";
-        case AUTOBUYER_MODE.BUY_10: return "Buys max";
+        case AUTOBUYER_MODE.BUY_SINGLE: return this.$t("tabs.automation.dimension.mode.buySingle");
+        case AUTOBUYER_MODE.BUY_10: return this.$t("tabs.automation.dimension.mode.buy10");
       }
       throw "Unknown Dimension Autobuyer mode";
     }

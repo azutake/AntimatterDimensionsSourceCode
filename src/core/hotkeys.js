@@ -27,67 +27,67 @@ import { GameKeyboard } from "./keyboard";
 
 export const shortcuts = [
   {
-    name: "Toggle Autobuyers",
+    name: "hotKeys.toggleAutobuyers",
     keys: ["a"],
     type: "bindHotkey",
     function: () => keyboardToggleAutobuyers(),
     visible: true
   }, {
-    name: "Buy one Tickspeed",
+    name: "hotKeys.buyOneTickspeed",
     keys: ["shift", "t"],
     type: "bindRepeatableHotkey",
     function: () => buyTickSpeed(),
     visible: true
   }, {
-    name: "Buy max Tickspeed",
+    name: "hotKeys.buyMaxTickspeed",
     keys: ["t"],
     type: "bindRepeatableHotkey",
     function: () => buyMaxTickSpeed(),
     visible: true
   }, {
-    name: "Max all",
+    name: "hotKeys.maxAll",
     keys: ["m"],
     type: "bindRepeatableHotkey",
     function: () => maxAll(),
     visible: true
   }, {
-    name: "Dimensional Sacrifice",
+    name: "hotKeys.dimensionalSacrifice",
     keys: ["s"],
     type: "bindRepeatableHotkey",
     function: () => sacrificeBtnClick(),
     visible: true
   }, {
-    name: "Dimension Boost",
+    name: "hotKeys.dimensionBoost",
     keys: ["d"],
     type: "bindRepeatableHotkey",
     function: () => manualRequestDimensionBoost(true),
     visible: true
   }, {
-    name: "Single Dimension Boost",
+    name: "hotKeys.singleDimensionBoost",
     keys: ["shift", "d"],
     type: "bindRepeatableHotkey",
     function: () => manualRequestDimensionBoost(false),
     visible: false
   }, {
-    name: "Antimatter Galaxy",
+    name: "hotKeys.antimatterGalaxy",
     keys: ["g"],
     type: "bindRepeatableHotkey",
     function: () => manualRequestGalaxyReset(true),
     visible: true
   }, {
-    name: "Single Antimatter Galaxy",
+    name: "hotKeys.singleAntimatterGalaxy",
     keys: ["shift", "g"],
     type: "bindRepeatableHotkey",
     function: () => manualRequestGalaxyReset(false),
     visible: false
   }, {
-    name: "Big Crunch",
+    name: "hotKeys.bigCrunch",
     keys: ["c"],
     type: "bindRepeatableHotkey",
     function: () => manualBigCrunchResetRequest(),
     visible: true
   }, {
-    name: "Replicanti Galaxy",
+    name: "hotKeys.replicantiGalaxy",
     keys: ["r"],
     type: "bindHotkey",
     function: () => {
@@ -96,13 +96,13 @@ export const shortcuts = [
     },
     visible: () => Replicanti.areUnlocked || PlayerProgress.eternityUnlocked()
   }, {
-    name: "Eternity",
+    name: "hotKeys.eternity",
     keys: ["e"],
     type: "bindRepeatableHotkey",
     function: () => eternityResetRequest(),
     visible: () => PlayerProgress.eternityUnlocked() || Player.canEternity
   }, {
-    name: "Toggle Time Study respec",
+    name: "hotKeys.toggleTimeStudyRespec",
     keys: ["shift", "e"],
     type: "bindHotkey",
     function: () => {
@@ -111,19 +111,19 @@ export const shortcuts = [
     },
     visible: () => PlayerProgress.eternityUnlocked()
   }, {
-    name: "Enter/Exit Dilation",
+    name: "hotKeys.enterExitDilation",
     keys: ["l"],
     type: "bindRepeatableHotkey",
     function: () => startDilatedEternityRequest(),
     visible: () => PlayerProgress.realityUnlocked() || PlayerProgress.dilationUnlocked()
   }, {
-    name: "Reality",
+    name: "hotKeys.reality",
     keys: ["y"],
     type: "bindRepeatableHotkey",
     function: () => requestManualReality(),
     visible: () => PlayerProgress.realityUnlocked() || isRealityAvailable()
   }, {
-    name: "Toggle Glyph unequip",
+    name: "hotKeys.toggleGlyphUnequip",
     keys: ["shift", "y"],
     type: "bindHotkey",
     function: () => {
@@ -132,49 +132,49 @@ export const shortcuts = [
     },
     visible: () => PlayerProgress.realityUnlocked()
   }, {
-    name: "Start/Pause Automator",
+    name: "hotKeys.startPauseAutomator",
     keys: ["u"],
     type: "bindHotkey",
     function: () => keyboardAutomatorToggle(),
     visible: () => Player.automatorUnlocked
   }, {
-    name: "Restart Automator",
+    name: "hotKeys.restartAutomator",
     keys: ["shift", "u"],
     type: "bindHotkey",
     function: () => keyboardAutomatorRestart(),
     visible: () => Player.automatorUnlocked
   }, {
-    name: "Undo Edit (Automator)",
+    name: "hotKeys.undoEditAutomator",
     keys: ["mod", "z"],
     type: "bind",
     function: () => AutomatorData.undoScriptEdit(),
     visible: () => Player.automatorUnlocked
   }, {
-    name: "Redo Edit (Automator)",
+    name: "hotKeys.redoEditAutomator",
     keys: ["mod", "y"],
     type: "bind",
     function: () => AutomatorData.redoScriptEdit(),
     visible: () => Player.automatorUnlocked
   }, {
-    name: "Toggle Black Hole",
+    name: "hotKeys.toggleBlackHole",
     keys: ["b"],
     type: "bindHotkey",
     function: () => BlackHoles.togglePause(),
     visible: () => PlayerProgress.realityUnlocked()
   }, {
-    name: "Toggle Continuum",
+    name: "hotKeys.toggleContinuum",
     keys: ["alt", "a"],
     type: "bindHotkey",
     function: () => keyboardToggleContinuum(),
     visible: () => Laitela.continuumUnlocked
   }, {
-    name: "Armageddon",
+    name: "hotKeys.armageddon",
     keys: ["z"],
     type: "bindRepeatableHotkey",
     function: () => armageddonRequest(),
     visible: () => Pelle.isDoomed
   }, {
-    name: "Toggle Glyph unequip (Pelle)",
+    name: "hotKeys.toggleGlyphUnequipPelle",
     keys: ["shift", "z"],
     type: "bindHotkey",
     function: () => {
@@ -184,7 +184,7 @@ export const shortcuts = [
     },
     visible: () => Pelle.isDoomed
   }, {
-    name: "Save game",
+    name: "hotKeys.saveGame",
     keys: ["mod", "s"],
     type: "bind",
     function: () => {
@@ -193,7 +193,7 @@ export const shortcuts = [
     },
     visible: true
   }, {
-    name: "Export game",
+    name: "hotKeys.exportGame",
     keys: ["mod", "e"],
     type: "bind",
     function: () => {
@@ -202,7 +202,7 @@ export const shortcuts = [
     },
     visible: true
   }, {
-    name: "Open Hotkey List Modal",
+    name: "hotKeys.openHotkeyListModal",
     keys: ["?"],
     type: "bind",
     function: () => {
@@ -211,7 +211,7 @@ export const shortcuts = [
     },
     visible: true
   }, {
-    name: "Open How To Play Modal",
+    name: "hotKeys.openHowToPlayModal",
     keys: ["h"],
     type: "bind",
     function: () => {
@@ -220,7 +220,7 @@ export const shortcuts = [
     },
     visible: true
   }, {
-    name: "Modify visible tabs",
+    name: "hotKeys.modifyVisibleTabs",
     keys: ["tab"],
     type: "bind",
     function: () => {
@@ -229,7 +229,7 @@ export const shortcuts = [
     },
     visible: true
   }, {
-    name: "Confirm Modal",
+    name: "hotKeys.confirmModal",
     keys: ["enter"],
     type: "bind",
     function: () => {
@@ -238,7 +238,7 @@ export const shortcuts = [
     },
     visible: true
   }, {
-    name: "Close Modal or open Options",
+    name: "hotKeys.closeModalOrOpenOptions",
     keys: ["esc"],
     type: "bind",
     function: () => {
@@ -247,7 +247,7 @@ export const shortcuts = [
     },
     visible: true
   }, {
-    name: "Paying respects",
+    name: "hotKeys.playingRespects",
     keys: ["f"],
     type: "bindRepeatable",
     function: () => {
@@ -256,7 +256,7 @@ export const shortcuts = [
     },
     visible: false
   }, {
-    name: "Change Tab",
+    name: "hotKeys.changeTab",
     keys: ["up"],
     type: "bind",
     function: () => {
@@ -265,7 +265,7 @@ export const shortcuts = [
     },
     visible: false
   }, {
-    name: "Change Tab",
+    name: "hotKeys.changeTab",
     keys: ["down"],
     type: "bind",
     function: () => {
@@ -274,7 +274,7 @@ export const shortcuts = [
     },
     visible: false
   }, {
-    name: "Change Subtab",
+    name: "hotKeys.changeSubtab",
     keys: ["left"],
     type: "bind",
     function: () => {
@@ -283,7 +283,7 @@ export const shortcuts = [
     },
     visible: false
   }, {
-    name: "Change Subtab",
+    name: "hotKeys.changeSubtab",
     keys: ["right"],
     type: "bind",
     function: () => {
@@ -292,49 +292,49 @@ export const shortcuts = [
     },
     visible: false
   }, {
-    name: "Doesn't exist",
+    name: "hotKeys.doesntExist",
     keys: ["9"],
     type: "bind",
     function: () => SecretAchievement(41).unlock(),
     visible: false
   },
   {
-    name: "Adjust Autobuyers",
+    name: "hotKeys.adjustAutobuyers",
     keys: ["mod", "alt", "a"],
     type: "bind",
     function: () => keyboardEditAutobuyers(),
     visible: () => Autobuyers.hasAutobuyersForEditModal
   },
   {
-    name: "Fullscreen",
+    name: "hotKeys.fullscreen",
     keys: ["F10"],
     type: "bind",
     function: () => {},
     visible: () => false
   },
   {
-    name: "Zoom In",
+    name: "hotKeys.zoomIn",
     keys: ["ctrl", "="],
     type: "bind",
     function: () => ElectronRuntime.increaseZoom(),
     visible: () => false
   },
   {
-    name: "Zoom In",
+    name: "hotKeys.zoomIn",
     keys: ["ctrl", "+"],
     type: "bind",
     function: () => ElectronRuntime.increaseZoom(),
     visible: () => false
   },
   {
-    name: "Zoom Out",
+    name: "hotKeys.zoomOut",
     keys: ["ctrl", "-"],
     type: "bind",
     function: () => ElectronRuntime.decreaseZoom(),
     visible: () => false
   },
   {
-    name: "Reset Zoom",
+    name: "hotKeys.resetZoom",
     keys: ["ctrl", "0"],
     type: "bind",
     function: () => ElectronRuntime.resetZoom(),

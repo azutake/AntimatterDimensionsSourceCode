@@ -81,16 +81,20 @@ export default {
 <template>
   <ModalWrapper>
     <template #header>
-      Hotkey List
+      {{ $t("modals.hotKey.header") }}
     </template>
     <span class="c-modal-hotkeys l-modal-hotkeys">
       <div class="l-modal-hotkeys__column">
         <div class="l-modal-hotkeys-row">
-          <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">Buy 1 Dimension</span>
+          <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">
+            {{ $t("modals.hotKey.buy1Dimension") }}
+          </span>
           <kbd>SHIFT</kbd><kbd>1</kbd>-<kbd>SHIFT</kbd><kbd>8</kbd>
         </div>
         <div class="l-modal-hotkeys-row">
-          <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">Buy 10 Dimensions</span>
+          <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">
+            {{ $t("modals.hotKey.buy10Dimensions") }}
+          </span>
           <kbd>1</kbd>-<kbd>8</kbd>
         </div>
         <div
@@ -101,7 +105,7 @@ export default {
             v-if="visible[index - 1]"
             class="l-modal-hotkeys-row"
           >
-            <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">{{ shortcutNames[index - 1] }}</span>
+            <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">{{ $t(shortcutNames[index - 1]) }}</span>
             <kbd
               v-for="(key, i) in shortcutKeys[index - 1]"
               :key="i"
@@ -113,48 +117,54 @@ export default {
       </div>
       <div class="l-modal-hotkeys__column l-modal-hotkeys__column--right">
         <div class="l-modal-hotkeys-row">
-          <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">Modifier Key</span>
+          <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">{{ $t("modals.hotKey.modifierKey") }}</span>
           <kbd>SHIFT</kbd>
         </div>
         <span class="c-modal-hotkeys__shift-description">
-          Shift is a modifier key that shows additional information on certain things
-          and adjusts the function of certain buttons.
+          {{ $t("modals.hotKey.modifierKeyDescription") }}
           <br>
           {{ moreShiftKeyInfo }}
         </span>
         <br>
         <div class="l-modal-hotkeys-row">
-          <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">Autobuyer Controls</span>
+          <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">
+            {{ $t("modals.hotKey.autobuyerControls") }}
+          </span>
           <kbd>ALT</kbd>
         </div>
         <span class="c-modal-hotkeys__shift-description">
-          Alt is a modifier key that, when pressed in conjunction with any key that has a corresponding autobuyer,
-          will toggle said autobuyer.
-          <br>
-          When pressing both Alt and Shift, you can toggle buying singles or buying max for the Antimatter Dimension
-          and Tickspeed Autobuyers instead.
+          {{ $t("modals.hotKey.autobuyerControlsDescription") }}
         </span>
         <br>
         <div class="l-modal-hotkeys-row">
-          <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">Tab Movement</span>
+          <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">
+            {{ $t("modals.hotKey.tabMovement") }}
+          </span>
           <div>
             <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd>
           </div>
         </div>
         <span class="c-modal-hotkeys__shift-description">
-          Using the Arrow Keys will cycle you through the game's pages.
-          The Up and Down arrows cycle you through tabs,
-          and the Left and Right arrows cycle you through that tab's subtabs.
+          {{ $t("modals.hotKey.tabMovementDescription") }}
         </span>
         <br>
         <div class="l-modal-hotkeys-row">
-          <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">Numpad Support</span>
+          <span class="c-modal-hotkeys-row__name l-modal-hotkeys-row__name">
+            {{ $t("modals.hotKey.numpadSupport") }}
+          </span>
         </div>
-        <span class="c-modal-hotkeys__shift-description">
-          Due to technical reasons, pressing a numpad key will purchase 10 of a Dimension if possible, but pressing
-          a numpad key with <kbd>SHIFT</kbd> will not buy a single Dimension. It may instead, depending on your device,
-          cause the page to scroll or change game tabs. <kbd>ALT</kbd> will still work as expected.
-        </span>
+        <i18n
+          path="modals.hotKey.numpadSupportDescription"
+          class="c-modal-hotkeys__shift-description"
+          tag="span"
+        >
+          <template #SHIFT>
+            <kbd>SHIFT</kbd>
+          </template>
+          <template #ALT>
+            <kbd>ALT</kbd>
+          </template>
+        </i18n>
         <template v-if="isElectron">
           <br>
           <div class="l-modal-hotkeys-row">

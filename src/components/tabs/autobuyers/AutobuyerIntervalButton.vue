@@ -52,7 +52,7 @@ export default {
     v-else-if="!isMaxed"
     class="o-autobuyer-btn l-autobuyer-box__button o-autobuyer-btn--unavailable"
   >
-    Complete the challenge to upgrade interval
+    {{ $t("tabs.automation.interval.needChallenge") }}
   </button>
 </template>
 

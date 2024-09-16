@@ -188,7 +188,7 @@ export default {
   >
     {{ name }}
     <br>
-    Requirement: {{ format(antimatterCost) }} Total Antimatter {{ showEternity }}
+    {{ $t("tabs.automation.requirement", { cost: format(antimatterCost), eternity: showEternity }) }}
   </div>
 </template>
 

@@ -1,3 +1,5 @@
+import { i18n } from "./i18n";
+
 function isEND() {
   const threshold = GameEnd.endState > END_STATE_MARKERS.END_NUMBERS
     ? 1
@@ -210,8 +212,8 @@ window.quantifyInt = function quantifyInt(name, value) {
 window.makeEnumeration = function makeEnumeration(items) {
   if (items.length === 0) return "";
   if (items.length === 1) return items[0];
-  if (items.length === 2) return `${items[0]} and ${items[1]}`;
-  const commaSeparated = items.slice(0, items.length - 1).join(", ");
+  if (items.length === 2) return i18n.t("enumeration.twoCombine", items);
+  const commaSeparated = items.slice(0, items.length - 1).join(i18n.t("enumeration.multiple.separator"));
   const last = items[items.length - 1];
-  return `${commaSeparated}, and ${last}`;
+  return i18n.t("enumeration.multiple.combine", { before: commaSeparated, last });
 };

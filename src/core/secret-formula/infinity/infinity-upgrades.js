@@ -1,4 +1,5 @@
 import { DC } from "../../constants";
+import { i18n } from "@/core/i18n";
 
 function dimInfinityMult() {
   return Currency.infinitiesTotal.value.times(0.2).plus(1);
@@ -11,7 +12,7 @@ export const infinityUpgrades = {
   totalTimeMult: {
     id: "timeMult",
     cost: 1,
-    description: "Antimatter Dimensions gain a multiplier based on time played",
+    description: i18n.t("infinityUpgrades.timeMult.description"),
     effect: () => Math.pow(Time.totalTimePlayed.totalMinutes / 2, 0.15),
     formatEffect: value => formatX(value, 2, 2),
     charged: {

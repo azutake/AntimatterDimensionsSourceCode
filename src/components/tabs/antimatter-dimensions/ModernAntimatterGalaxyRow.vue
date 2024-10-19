@@ -34,11 +34,11 @@ export default {
     buttonText() {
       if (this.lockText !== null) return this.lockText;
       const reset = [];
-      if (!Achievement(111).isUnlocked) reset.push("Dimensions");
-      if (!Achievement(143).isUnlocked) reset.push("Dimension Boosts");
+      if (!Achievement(111).isUnlocked) reset.push(this.$tc("names.dimension", 2));
+      if (!Achievement(143).isUnlocked) reset.push(this.$tc("names.dimensionBoost", 2));
       return reset.length === 0
-        ? `Increase the power of Tickspeed upgrades`
-        : `Reset your ${makeEnumeration(reset)} to increase the power of Tickspeed upgrades`;
+        ? this.$t("tabs.dimensions.antimatterGalaxy.buttonTextWithoutReset")
+        : this.$t("tabs.dimensions.antimatterGalaxy.buttonTextWithReset", { resets: makeEnumeration(reset) });
     },
     sumText() {
       const parts = [Math.max(this.galaxies.normal, 0)];

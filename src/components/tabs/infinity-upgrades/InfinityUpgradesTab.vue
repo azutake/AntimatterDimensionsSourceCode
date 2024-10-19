@@ -140,7 +140,7 @@ export default {
       You cannot Charge Infinity Upgrades while Doomed.
     </div>
     <br>
-    Within each column, the upgrades must be purchased from top to bottom.
+    {{ $t("tabs.infinity.needSeqTopToBottom") }}
     <br>
     <div class="l-infinity-upgrade-grid l-infinity-upgrades-tab__grid">
       <div

@@ -60,6 +60,11 @@
       "over9000Message": "Dimensional Sacrifice will give you a boost to the 8th Antimatter Dimension based on the amount of 1st Antimatter Dimensions you had at the time of Sacrificing.",
       "message": "Dimensional Sacrifice will remove all of your 1st through 7th Antimatter Dimensions (with the cost and multiplier unchanged), for a boost to the 8th Antimatter Dimension based on the total amount of 1st Antimatter Dimensions sacrificed. It will take time to regain production.",
       "multiplier": "Multiplier is currently {current} and will increase to {next} on Dimensional Sacrifice."
+    },
+    "antimatterGalaxy": {
+      "headerWithBulk": "You are about to purchase {galaxies}",
+      "headerWithoutBulk": "You are about to purchase an Antimatter Galaxy",
+      "areYouSureYouWant": "Are you sure you want to purchase an {galaxy}? {message}"
     }
   },
   "common": {
@@ -70,6 +75,9 @@
     "time": {
       "second": "{s} second | {s} seconds"
     }
+  },
+  "display": {
+    "cost": "Cost: {0}"
   },
   "enumeration": {
     "twoCombine": "{0} and {1}",
@@ -85,7 +93,18 @@
       "normal": "Antimatter Galaxy | Antimatter Galaxies",
       "distant": "Distant Antimatter Galaxy | Distant Antimatter Galaxies",
       "remote": "Remote Antimatter Galaxy | Remote Antimatter Galaxies"
-    }
+    },
+    "dimensionBoost": "Dimension Boost | Dimension Boosts"
+  },
+  "counts": {
+    "dimension": "{count} Dimension | {count} Dimensions",
+    "antimatterDimension": "{count} Antimatter Dimension | {count} Antimatter Dimensions",
+    "antimatterGalaxy": {
+      "normal": "{count} Antimatter Galaxy | {count} Antimatter Galaxies",
+      "distant": "{count} Distant Antimatter Galaxy | {count} Distant Antimatter Galaxies",
+      "remote": "{count} Remote Antimatter Galaxy | {count} Remote Antimatter Galaxies"
+    },
+    "dimensionBoost": "{count} Dimension Boost | {count} Dimension Boosts"
   },
   "tabs": {
     "dimensions": {
@@ -137,7 +156,9 @@
         "resetDimension": "Reset your Dimensions to {effects}"
       },
       "antimatterGalaxy": {
-        "header": "{typeName} ({count})"
+        "header": "{typeName} ({count})",
+        "buttonTextWithReset": "Reset your {resets} to increase the power of Tickspeed upgrades",
+        "buttonTextWithoutReset": "Increase the power of Tickspeed upgrades"
       },
       "dimensionalSacrifice": {
         "enabledHeader": "Dimensional Sacrifice ({count})",
@@ -189,7 +210,8 @@
       "name": "Challenges"
     },
     "infinity": {
-      "name": "Infinity"
+      "name": "Infinity",
+      "needSeqTopToBottom": "Within each column, the upgrades must be purchased from top to bottom."
     },
     "eternity": {
       "name": "Eternity"
@@ -1089,6 +1111,65 @@
         "name": "Stack overflow",
         "description": "Have more Automator errors than lines."
       }
+    }
+  },
+  "infinityUpgrades": {
+    "timeMult": {
+      "description": "Antimatter Dimensions gain a multiplier based on time played"
+    },
+    "18Mult": {
+      "description": "1st and 8th Antimatter Dimensions gain a multiplier based on Infinities"
+    },
+    "27Mult": {
+      "description": "2nd and 7th Antimatter Dimensions gain a multiplier based on Infinities"
+    },
+    "36Mult": {
+      "description": "3rd and 6th Antimatter Dimensions gain a multiplier based on Infinities"
+    },
+    "45Mult": {
+      "description": "4th and 5th Antimatter Dimensions gain a multiplier based on Infinities"
+    },
+    "resetBoost": {
+      "description": "Decrease the number of Dimensions needed for Dimension Boosts and Antimatter Galaxies by {0}"
+    },
+    "dimMult": {
+      "description": "Increase the multiplier for buying {0} Antimatter Dimensions"
+    },
+    "galaxyBoost": {
+      "description": "All Galaxies are twice as strong"
+    },
+    "timeMult2": {
+      "description": "Antimatter Dimensions gain a multiplier based on time spent in current Infinity"
+    },
+    "unspentBonus": {
+      "description": "Multiplier to 1st Antimatter Dimension based on unspent Infinity Points"
+    },
+    "resetMult": {
+      "description": "Increase Dimension Boost multiplier"
+    },
+    "passiveGen": {
+      "description": "Passively generate Infinity Points {0} times slower than your fastest Infinity"
+    },
+    "skipReset1": {
+      "description": "Start every reset with {0} Dimension Boost, automatically unlocking the 5th Antimatter Dimension"
+    },
+    "skipReset2": {
+      "description": "Start every reset with {0} Dimension Boosts, automatically unlocking the 6th Antimatter Dimension"
+    },
+    "skipReset3": {
+      "description": "Start every reset with {0} Dimension Boosts, automatically unlocking the 7th Antimatter Dimension"
+    },
+    "skipResetGalaxy": {
+      "description": "Start every reset with {0} Dimension Boosts, automatically unlocking the 8th Antimatter Dimension; and an Antimatter Galaxy"
+    },
+    "ipOffline": {
+      "description": {
+        "withOfflineProgress": "Only while offline, gain {0} of your best IP/min without using Max All",
+        "withoutOfflineProgress": "This upgrade would give offline Infinity Point generation, but offline progress is currently disabled"
+      }
+    },
+    "ipMult": {
+      "description": "Multiply Infinity Points from all sources by {0}"
     }
   }
 }

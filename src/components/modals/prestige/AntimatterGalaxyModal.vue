@@ -22,8 +22,10 @@ export default {
   },
   computed: {
     topLabel() {
-      if (this.bulk) return `You are about to purchase ${quantifyInt("Antimatter Galaxy", this.newGalaxies)}`;
-      return `You are about to purchase an Antimatter Galaxy`;
+      if (this.bulk) return this.$t("modals.antimatterGalaxy.headerWithoutBulk", {
+        galaxies: this.$tc("counts.antimatterGalaxy.normal", this.newGalaxies, { count: this.newGalaxies })
+      });
+      return this.$t("modals.antimatterGalaxy.headerWithoutBulk");
     },
     message() {
       const resetResouces = [];
@@ -45,9 +47,13 @@ export default {
         ? `This will reset nothing, and ${tickspeedInfo}`
         : `This will reset your ${resetList}. However, ${tickspeedInfo}`;
 
-      if (this.bulk) return `Are you sure you want to purchase
-      ${quantifyInt("Antimatter Galaxy", this.newGalaxies)}? ${message}`;
-      return `Are you sure you want to purchase an Antimatter Galaxy? ${message}`;
+      if (this.bulk)
+        return this.$t("modals.antimatterGalaxy.areYouSureYouWant", {
+          galaxy: this.$tc("counts.antimatterGalaxy.normal", this.newGalaxies, { count: this.newGalaxies }), message
+        });
+      return this.$t("modals.antimatterGalaxy.areYouSureYouWant", {
+        galaxy: this.$tc("names.antimatterGalaxy.normal", 1), message
+      });
     }
   },
   created() {

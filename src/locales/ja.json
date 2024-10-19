@@ -60,6 +60,11 @@
       "over9000Message": "Dimensional Sacrifice will give you a boost to the 8th Antimatter Dimension based on the amount of 1st Antimatter Dimensions you had at the time of Sacrificing.",
       "message": "次元昇華を行うと、第1から第7までの反物質次元が全て取り除かれます（コストと乗数は引継ぎます）。そのため、生成量を回復するには時間がかかります。代わりに、昇華した第1反物質次元の総量に基づいて第8反物質次元へのブーストが得られます。",
       "multiplier": "現在の倍率は{current}で、次元昇華を行うと{next}に増加します。"
+    },
+    "antimatterGalaxy": {
+      "headerWithBulk": "{galaxies}を購入しようとしています",
+      "headerWithoutBulk": "反物質銀河を購入しようとしています",
+      "areYouSureYouWant": "本当に{galaxy}を購入してもよろしいですか？ {message}"
     }
   },
   "common": {
@@ -71,6 +76,9 @@
       "second": "{s}秒"
     }
   },
+  "display": {
+    "cost": "コスト: {0}"
+  },
   "enumeration": {
     "twoCombine": "{0}と{1}",
     "multiple": {
@@ -79,13 +87,14 @@
     }
   },
   "names": {
-    "dimension": "Dimension | Dimensions",
-    "antimatterDimension": "Antimatter Dimension | Antimatter Dimensions",
+    "dimension": "次元",
+    "antimatterDimension": "反物質次元",
     "antimatterGalaxy": {
-      "normal": "Antimatter Galaxy | Antimatter Galaxies",
+      "normal": "反物質銀河",
       "distant": "Distant Antimatter Galaxy | Distant Antimatter Galaxies",
       "remote": "Remote Antimatter Galaxy | Remote Antimatter Galaxies"
-    }
+    },
+    "dimensionBoost": "次元加速"
   },
   "tabs": {
     "dimensions": {
@@ -138,7 +147,9 @@
         "resetDimension": "反物質次元をリセットして{effects}"
       },
       "antimatterGalaxy": {
-        "header": "{typeName} ({count})"
+        "header": "{typeName} ({count})",
+        "buttonTextWithReset": "{resets}をリセットして時間加速のパワーを上げる",
+        "buttonTextWithoutReset": "時間加速のパワーを上げる"
       },
       "dimensionalSacrifice": {
         "enabledHeader": "次元昇華({count})",
@@ -190,7 +201,8 @@
       "name": "チャレンジ"
     },
     "infinity": {
-      "name": "無限"
+      "name": "無限",
+      "needSeqTopToBottom": "各列の中で、アップグレードは上から下に購入に開放されていきます。"
     },
     "eternity": {
       "name": "永遠"
@@ -1024,6 +1036,65 @@
         "name": "Stack overflow",
         "description": "Have more Automator errors than lines."
       }
+    }
+  },
+  "infinityUpgrades": {
+    "timeMult": {
+      "description": "Antimatter Dimensions gain a multiplier based on time played"
+    },
+    "18Mult": {
+      "description": "1st and 8th Antimatter Dimensions gain a multiplier based on Infinities"
+    },
+    "27Mult": {
+      "description": "2nd and 7th Antimatter Dimensions gain a multiplier based on Infinities"
+    },
+    "36Mult": {
+      "description": "3rd and 6th Antimatter Dimensions gain a multiplier based on Infinities"
+    },
+    "45Mult": {
+      "description": "4th and 5th Antimatter Dimensions gain a multiplier based on Infinities"
+    },
+    "resetBoost": {
+      "description": "Decrease the number of Dimensions needed for Dimension Boosts and Antimatter Galaxies by {0}"
+    },
+    "dimMult": {
+      "description": "Increase the multiplier for buying {0} Antimatter Dimensions"
+    },
+    "galaxyBoost": {
+      "description": "All Galaxies are twice as strong"
+    },
+    "timeMult2": {
+      "description": "Antimatter Dimensions gain a multiplier based on time spent in current Infinity"
+    },
+    "unspentBonus": {
+      "description": "Multiplier to 1st Antimatter Dimension based on unspent Infinity Points"
+    },
+    "resetMult": {
+      "description": "Increase Dimension Boost multiplier"
+    },
+    "passiveGen": {
+      "description": "Passively generate Infinity Points {0} times slower than your fastest Infinity"
+    },
+    "skipReset1": {
+      "description": "Start every reset with {0} Dimension Boost, automatically unlocking the 5th Antimatter Dimension"
+    },
+    "skipReset2": {
+      "description": "Start every reset with {0} Dimension Boosts, automatically unlocking the 6th Antimatter Dimension"
+    },
+    "skipReset3": {
+      "description": "Start every reset with {0} Dimension Boosts, automatically unlocking the 7th Antimatter Dimension"
+    },
+    "skipResetGalaxy": {
+      "description": "Start every reset with {0} Dimension Boosts, automatically unlocking the 8th Antimatter Dimension; and an Antimatter Galaxy"
+    },
+    "ipOffline": {
+      "description": {
+        "withOfflineProgress": "Only while offline, gain {0} of your best IP/min without using Max All",
+        "withoutOfflineProgress": "This upgrade would give offline Infinity Point generation, but offline progress is currently disabled"
+      }
+    },
+    "ipMult": {
+      "description": "Multiply Infinity Points from all sources by {0}"
     }
   }
 }

@@ -11,5 +11,12 @@ module.exports = {
   outputDir: STEAM ? "../AppFiles" : "dist",
   configureWebpack: {
     devtool: DEV ? "eval-source-map" : "source-map",
+  },
+  devServer: {
+    allowedHosts: "all",
+    port: 10288,
+    client: {
+      webSocketURL: "auto://0.0.0.0:0/ws"
+    },
   }
 };
